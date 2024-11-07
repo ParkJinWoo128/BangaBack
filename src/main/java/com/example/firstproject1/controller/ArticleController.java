@@ -8,14 +8,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class ArticleController {
 
-    @GetMapping("/article/new")
-    public String newArticleForm() {
-        return "article/new";
-    }
-
-    @PostMapping("/article/create")
-    public String createAticle() {
-        System.out.println(form.toString());
-        return "";
+    @GetMapping("/articles/new")
+    public String newArticle() {
+        return "articles/new";
     }
 }
