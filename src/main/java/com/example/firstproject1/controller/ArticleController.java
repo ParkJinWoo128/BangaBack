@@ -12,4 +12,9 @@ public class ArticleController {
     public String newArticle() {
         return "articles/new";
     }
+
+    @PostMapping("/article/create")
+    public String creteArticle() {
+        return "";
+    }
 }
