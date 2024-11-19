@@ -31,11 +31,11 @@ public class ArticleController {
 
         // 1. Dto 객체를 변환 -> Entity !!
         Article article = form.toEntity();
-        System.out.println(article.toString());
+        log.info(article.toString());
 
         // 2. Repository에게 Entity를 DB안에 저장하게 명령!!
         Article saved = articleRepository.save(article);
-        System.out.println(saved.toString());
+        log.info(saved.toString());
         return "";
     }
 
@@ -50,10 +50,9 @@ public class ArticleController {
         Article articleEntity = articleRepository.findById(id).orElse(null);
 
         // 2. 가져온 데이터를 모델에 등록함.
-        model.addAttribute("articles", articleEntity);
+        model.addAttribute("article", articleEntity);
 
         // 3. 보여줄 페이지를 결정!
         return "articles/show";
     }
 }
-
