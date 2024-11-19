@@ -1,0 +1,21 @@
+{{>layout/header}}
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#article}}
+    <tr>
+        <th>{{id}}}1</th>
+        <td>{{title}}제목1</td>
+        <td>{{content}}내용1</td>
+    </tr>
+    {{/article}}
+</table>
+
+{{>layout/footer}}
