@@ -27,6 +27,7 @@ public class ArticleController {
     @PostMapping("/articles/create")
     public String creteArticle(ArticleForm form) {
         log.info(form.toString());
+        // System.out.println(article.toString());
 
         // 1. Dto 객체를 변환 -> Entity !!
         Article article = form.toEntity();
